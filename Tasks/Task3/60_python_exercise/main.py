@@ -1,7 +1,7 @@
 # **1-Write a Python program to calculate the length of a string using 2 ways
-string  = input()
+string = input()
 print(len(string))
-count  = 0
+count = 0
 for i in string:
     count += 1
 print(count)
