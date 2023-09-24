@@ -1,9 +1,5 @@
 import pandas as pd
 
-df = pd.read_excel("test.xlsx", "Sheet1")
-print(df)
-print()
-
 
 def convert_people_cell(cell):
     if cell == "n.a.":
@@ -29,6 +25,4 @@ new = pd.read_excel("test.xlsx", "Sheet1", converters={
     'eps': convert_eps_cell
 })
 
-df = df._append(new, ignore_index=True)
-print(df)
-df.to_excel("test.xlsx", index=True, sheet_name="Sheet1")
+new.to_excel("test.xlsx", mode='a', index=True)
